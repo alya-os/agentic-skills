@@ -1,0 +1,5 @@
+{
+  "name": "premium-web-design",
+  "description": "Create, refine, audit, or prototype frontend interfaces with high design quality. Modes: create (incl. --landing conversion pages), refine (polish/animate/colorize/overdrive), audit (technical + design + pre-launch CWV gate), prototype (multi-variant HTML, ad-channel schemas), onboard, mirror. Behavioral UX psychology as a core mechanic (smart defaults, goal gradient, reciprocity, endowment, loss aversion, anchoring — with an ethics guardrail). Two lanes: Admire (bold marketing UI) vs Operate (data-dense dashboards/tables/admin — contextual components, progressive disclosure, invisible UI, 4/8-pt grid, five states). 26 reference docs. Includes a proactive quick review and AI-slop detection.",
+  "version": "2.4.0"
+}

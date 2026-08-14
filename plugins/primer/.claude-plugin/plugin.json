@@ -1,0 +1,5 @@
+{
+  "name": "primer",
+  "description": "Prime Claude with full project context at the start of a new session",
+  "version": "1.0.0"
+}

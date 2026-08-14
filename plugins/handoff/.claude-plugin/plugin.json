@@ -1,0 +1,5 @@
+{
+  "name": "handoff",
+  "description": "Capture session state for seamless continuation. Generates structured handoff documents with goals, decisions, dead ends, suggested skills, and next steps. Optional argument tailors the handoff to the next session's purpose; redacts secrets and references other artifacts instead of duplicating them.",
+  "version": "1.2.0"
+}

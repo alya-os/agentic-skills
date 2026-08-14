@@ -1,0 +1,18 @@
+{
+  "description": "Deterministic AI-slop pre-filter. After any HTML Write/Edit, slop_lint scans the file and prints a one-line advisory if it trips >=3 fingerprints. Local + zero API cost. No-op on non-HTML; opt out with SLOP_LINT_HOOK_DISABLED=1.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uv",
+            "args": ["run", "${CLAUDE_PLUGIN_ROOT}/skills/qa-sentinel/scripts/slop_lint.py", "--hook"],
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}

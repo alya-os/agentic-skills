@@ -1,0 +1,5 @@
+{
+  "name": "idea-validation",
+  "description": "Startup idea validation framework that opens with a fast 9-dimension serial-founder pre-screen (Build / Sleep-on-it / Pass gate) then runs 7 brutal stress-test prompts (VC reality check, angry customer simulation, pricing stress test, competitive teardown, founding team audit, 18-month survival sim, one-sentence pitch test) only if it passes. Produces a scored go/no-go validation report plus constructive pivots. Use when a founder, PM, or operator wants to gut-check a startup or business idea before committing resources.",
+  "version": "1.2.1"
+}

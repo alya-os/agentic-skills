@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-marketplace.json",
+  "name": "agentic-skills",
+  "description": "Production agent skills open-sourced by ALYA Labs.",
+  "owner": {
+    "name": "ALYA Labs",
+    "url": "https://github.com/alya-os"
+  },
+  "plugins": [
+    {
+      "name": "qa-sentinel",
+      "description": "Goal-anchored adversarial verifier for any work an agent declares done. v1.0 redesign: reconstructs the actual acceptance criteria first, tries to FALSIFY the completion claim via independent channels, scales verification to change size, maintains a living qa-memory of human corrections (41-pattern failure catalog as seed corpus), renders calibrated verdicts with mandatory NOT-CHECKED disclosure, and runs sustained find-fix-verify iteration via /qa loop with fresh-context agents and a destructive-fix count-invariant gate.",
+      "version": "1.3.0",
+      "source": "./plugins/qa-sentinel",
+      "category": "quality"
+    },
+    {
+      "name": "deepdive",
+      "description": "Recursive context processing engine that prevents quality degradation on complex, multi-source tasks. Based on Recursive Language Models (Zhang, Kraska & Khattab, MIT CSAIL, 2026).",
+      "version": "1.0.0",
+      "source": "./plugins/deepdive",
+      "category": "research"
+    },
+    {
+      "name": "premium-web-design",
+      "description": "Create, refine, audit, or prototype frontend interfaces with high design quality. Modes: create (incl. --landing conversion pages), refine (polish/animate/colorize/overdrive), audit (technical + design + pre-launch CWV gate), prototype (multi-variant HTML, ad-channel schemas), onboard, mirror. Behavioral UX psychology as a core mechanic (smart defaults, goal gradient, reciprocity, endowment, loss aversion, anchoring — with an ethics guardrail). Two lanes: Admire (bold marketing UI) vs Operate (data-dense dashboards/tables/admin — contextual components, progressive disclosure, invisible UI, 4/8-pt grid, five states). 26 reference docs. Includes a proactive quick review and AI-slop detection.",
+      "version": "2.4.0",
+      "source": "./plugins/premium-web-design",
+      "category": "design"
+    },
+    {
+      "name": "autoskill",
+      "description": "Analyze coding sessions to detect corrections and preferences, then propose targeted skill improvements. Includes bidirectional push to sync edits back to your skills repo.",
+      "version": "1.1.0",
+      "source": "./plugins/autoskill",
+      "category": "productivity"
+    },
+    {
+      "name": "handoff",
+      "description": "Capture session state for seamless continuation. Generates structured handoff documents with goals, decisions, dead ends, suggested skills, and next steps. Optional argument tailors the handoff to the next session's purpose; redacts secrets and references other artifacts instead of duplicating them.",
+      "version": "1.2.0",
+      "source": "./plugins/handoff",
+      "category": "productivity"
+    },
+    {
+      "name": "primer",
+      "description": "Prime Claude with full project context at the start of a new session",
+      "version": "1.0.0",
+      "source": "./plugins/primer",
+      "category": "productivity"
+    },
+    {
+      "name": "idea-validation",
+      "description": "Startup idea validation framework that opens with a fast 9-dimension serial-founder pre-screen (Build / Sleep-on-it / Pass gate) then runs 7 brutal stress-test prompts (VC reality check, angry customer simulation, pricing stress test, competitive teardown, founding team audit, 18-month survival sim, one-sentence pitch test) only if it passes. Produces a scored go/no-go validation report plus constructive pivots. Use when a founder, PM, or operator wants to gut-check a startup or business idea before committing resources.",
+      "version": "1.2.1",
+      "source": "./plugins/idea-validation",
+      "category": "strategy"
+    },
+    {
+      "name": "brand-voice-generator",
+      "description": "Generate tone-of-voice and brand-system files for use with the PPTX Generator and other brand-aware skills.",
+      "version": "1.0.0",
+      "source": "./plugins/brand-voice-generator",
+      "category": "content"
+    }
+  ]
+}

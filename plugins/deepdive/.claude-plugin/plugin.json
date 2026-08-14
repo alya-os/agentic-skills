@@ -1,0 +1,5 @@
+{
+  "name": "deepdive",
+  "description": "Recursive context processing engine that prevents quality degradation on complex, multi-source tasks. Based on Recursive Language Models (Zhang, Kraska & Khattab, MIT CSAIL, 2026).",
+  "version": "1.0.0"
+}

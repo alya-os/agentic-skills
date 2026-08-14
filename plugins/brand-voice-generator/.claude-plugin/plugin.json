@@ -1,0 +1,5 @@
+{
+  "name": "brand-voice-generator",
+  "description": "Generate tone-of-voice and brand-system files for use with the PPTX Generator and other brand-aware skills.",
+  "version": "1.0.0"
+}
