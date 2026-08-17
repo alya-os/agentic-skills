@@ -9,6 +9,22 @@ One job: **falsify the claim "this is done" against the goal the human actually 
 
 Built from the documented failures of v0.x (see `references/qa-memory.md` seeds): verdicts against generic quality dimensions while the mission failed, 100% "coverage" with half a catalog broken, rules that didn't change behavior. Three design answers: **goal model first, adversarial falsification, memory over scar tissue.**
 
+## Requirements
+
+The skill itself needs nothing. One script does: `scripts/slop_lint.py` requires
+[`uv`](https://docs.astral.sh/uv/), which resolves its inline PEP 723 dependency
+(`beautifulsoup4`) on first run. It runs from two places:
+
+- The designer lens, as the deterministic AI-slop pre-filter.
+- The bundled `PostToolUse` hook, after any `Write`, `Edit` or `MultiEdit`.
+
+Without `uv` the hook fails on every file edit. Either install `uv`, or set
+`SLOP_LINT_HOOK_DISABLED=1` to silence the hook and invoke the lint by hand when needed.
+Run under plain `python3` and it exits with an explanatory message rather than a traceback.
+
+Everything else in this skill is instructions, and every lens degrades to a documented
+fallback when its preferred tool is missing (see `references/skill-orchestration.md`).
+
 ## Modes
 
 | Mode | What it does |

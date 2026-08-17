@@ -1,5 +1,5 @@
 {
-  "description": "Deterministic AI-slop pre-filter. After any HTML Write/Edit, slop_lint scans the file and prints a one-line advisory if it trips >=3 fingerprints. Local + zero API cost. No-op on non-HTML; opt out with SLOP_LINT_HOOK_DISABLED=1.",
+  "description": "Deterministic AI-slop pre-filter. After any HTML Write/Edit, slop_lint scans the file and prints a one-line advisory if it trips >=3 fingerprints. Local + zero API cost. No-op on non-HTML. REQUIRES uv (https://docs.astral.sh/uv/), which resolves the inline PEP 723 dependency on first run; without uv this hook fails on every Write/Edit, so opt out with SLOP_LINT_HOOK_DISABLED=1.",
   "hooks": {
     "PostToolUse": [
       {

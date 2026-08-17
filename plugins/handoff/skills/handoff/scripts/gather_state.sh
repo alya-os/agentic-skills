@@ -21,12 +21,16 @@ git log --oneline -10 2>/dev/null || echo "(no history)"
 
 echo ""
 echo "=== DIRTY FILE COUNT ==="
-DIRTY=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ')
-echo "$DIRTY files with uncommitted changes"
+DIRTY=$(git status --porcelain 2>/dev/null | wc -l | tr -d ' ') || DIRTY=""
+if [ -n "$DIRTY" ]; then
+  echo "$DIRTY files with uncommitted changes"
+else
+  echo "(not a git repo)"
+fi
 
 echo ""
 echo "=== STASH ==="
-STASH_COUNT=$(git stash list 2>/dev/null | wc -l | tr -d ' ')
+STASH_COUNT=$(git stash list 2>/dev/null | wc -l | tr -d ' ') || STASH_COUNT=0
 if [ "$STASH_COUNT" -gt 0 ]; then
   echo "$STASH_COUNT stashed entries:"
   git stash list

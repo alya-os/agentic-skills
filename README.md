@@ -31,6 +31,24 @@ There is no shortage of Claude Code skill collections. Most are prompt packs wri
 
 Each skill is self-contained. Install one, or install them all.
 
+### Requirements
+
+Five of the eight skills are pure instructions with no dependencies at all: `premium-web-design`, `brand-voice-generator`, `idea-validation`, `autoskill`, `primer`. Install and go.
+
+The other three ship executable scripts. Nothing here is needed to install a skill, only to run the parts that use a script:
+
+| Skill | Needs | For what | Without it |
+|-------|-------|----------|------------|
+| `qa-sentinel` | [`uv`](https://docs.astral.sh/uv/) | `slop_lint.py`, the AI-slop pre-filter, run by the designer lens and by the `PostToolUse` hook | The hook fails on every file edit. Opt out with `SLOP_LINT_HOOK_DISABLED=1`, or skip the hook and run the lint by hand |
+| `deepdive` | `uv` | `rce_engine.py`, `concept_auditor.py` | Those two phases are unavailable; the rest of the skill still works |
+| `deepdive` | `ANTHROPIC_API_KEY` | Same two scripts, which call the Claude API directly | Both exit with a clear error. See the cost note below |
+| `deepdive` | Python 3.10+ | `entropy_probe.py`, `rlm_repl.py` (standard library only, no `uv` needed) | Entropy profiling and the REPL are unavailable |
+| `handoff` | `git`, `bash` | `gather_state.sh`, which collects branch, commits and dirty files | The script degrades gracefully and reports what it could not read |
+
+`uv` resolves each script's inline [PEP 723](https://peps.python.org/pep-0723/) dependencies on first run, so you never install `beautifulsoup4` or `anthropic` yourself.
+
+**Cost note.** deepdive's `rce_engine.py` and `concept_auditor.py` are the only things in this repository that spend money. They call the Claude API with your own `ANTHROPIC_API_KEY`, billed separately from your Claude Code plan, and `rce_engine.py` fans out across sub-calls per section. Every other skill, deepdive's other phases included, runs inside your normal Claude Code session at no extra cost.
+
 ---
 
 ## The skills

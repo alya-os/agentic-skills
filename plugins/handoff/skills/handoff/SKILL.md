@@ -33,6 +33,10 @@ recent log, and environment snapshot. Read the output to populate the template.
 bash <skill_path>/scripts/gather_state.sh
 ```
 
+Needs `bash` and `git`, nothing else. Outside a git repository, or with `git` absent, each
+section reports its own gap (`(not a git repo)`, `(no commits)`) instead of failing, so the
+handoff still gets written from the interview in step 2.
+
 ### 2. Interview the session (context window scan)
 
 Scan the current conversation for:

@@ -471,12 +471,25 @@ an anti-hallucination guarantee that regular prompting cannot offer.
 
 Check existence before invoking. If absent, run the algorithm manually.
 
-| Script | Purpose |
-|--------|---------|
-| `scripts/rlm_repl.py` | Persistent REPL |
-| `scripts/entropy_probe.py` | Standalone entropy profiler |
-| `scripts/concept_auditor.py` | Coverage heuristic |
-| `scripts/rce_engine.py` | Full recursive engine |
+| Script | Purpose | Requires | Invoke |
+|--------|---------|----------|--------|
+| `scripts/rlm_repl.py` | Persistent REPL | Python 3.10+ (stdlib only) | `python3` |
+| `scripts/entropy_probe.py` | Standalone entropy profiler | Python 3.10+ (stdlib only) | `python3` |
+| `scripts/concept_auditor.py` | Coverage heuristic | `uv`, `ANTHROPIC_API_KEY` | `uv run` |
+| `scripts/rce_engine.py` | Full recursive engine | `uv`, `ANTHROPIC_API_KEY` | `uv run` |
+
+`uv` resolves the inline PEP 723 dependencies (`anthropic`) on first run; do not pip-install
+anything by hand.
+
+**These two scripts spend money.** `concept_auditor.py` and `rce_engine.py` call the Claude
+API directly with the user's own `ANTHROPIC_API_KEY`, billed separately from their Claude
+Code plan, and `rce_engine.py` fans out one sub-call per section. Both exit with a clear
+error when the key is unset. Say so before running either on a large source set, and prefer
+the sub-agent path (which runs inside the current session at no extra cost) unless the user
+asked for the standalone engine.
+
+Default model IDs live in the scripts (`--root-model`, `--sub-model`, `--model`). Check them
+against the current model line-up before a long run rather than trusting the defaults.
 
 ## Fallback
 

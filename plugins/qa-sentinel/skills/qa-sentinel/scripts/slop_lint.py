@@ -33,8 +33,10 @@ from pathlib import Path
 try:
     from bs4 import BeautifulSoup
 except ImportError:
+    # Exit cleanly rather than re-raising: this runs from a PostToolUse hook, where a
+    # traceback is noise and the one-line instruction is the whole actionable message.
     print("slop-lint needs beautifulsoup4; run via `uv run` so PEP 723 deps resolve.", file=sys.stderr)
-    raise
+    sys.exit(1)
 
 UA = "Mozilla/5.0 (slop-lint; qa-sentinel)"  # browser UA -- some WAFs 403 bare python
 
