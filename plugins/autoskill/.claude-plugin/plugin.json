@@ -1,5 +1,5 @@
 {
   "name": "autoskill",
-  "description": "Analyze coding sessions to detect corrections and preferences, then propose targeted skill improvements. Includes bidirectional push to sync edits back to your skills repo.",
+  "description": "Analyze coding sessions to detect corrections and preferences, then propose targeted improvements to the skills in your own workspace. Edits stay local: nothing is pushed to any upstream repo.",
   "version": "1.1.0"
 }

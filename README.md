@@ -1,6 +1,6 @@
 # Agentic Skills
 
-**Production Agent Skills for Claude Code, open-sourced by ALYA Labs.** Seven skills we run on real work every day: adversarial verification, deep research, interface design, brand systems, idea validation, and the two meta-skills that keep an agent improving and remembering.
+**Production Agent Skills for Claude Code, open-sourced by ALYA Labs.** Eight skills we run on real work every day: adversarial verification, deep research, interface design, brand systems, idea validation, and the three meta-skills that keep an agent improving, remembering, and oriented in a fresh session.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Skills](https://img.shields.io/badge/skills-8-6d28d9.svg)](#the-skills)
@@ -80,7 +80,7 @@ This library was cut down from a larger internal marketplace. Three skills that 
 | `humanizer` | Derived from an excellent MIT upstream plus a share-alike pattern source. Use the original; we would rather contribute to it than repackage it. |
 | `skill-creator` | Anthropic already publishes this one under Apache-2.0. Get it from them. |
 
-We would rather ship seven skills we fully own than eleven with an asterisk. If a skill here is useful to you, you can use it commercially, fork it, and ship it without wondering whose material you inherited.
+We would rather ship eight skills we fully own than eleven with an asterisk. If a skill here is useful to you, you can use it commercially, fork it, and ship it without wondering whose material you inherited.
 
 ---
 
@@ -101,7 +101,7 @@ Our research focus is **GEO (Generative Engine Optimization)** and **GAIO(TM)**:
 Yes. MIT. The ALYA, ALYA Labs, GAIO(TM), and Index names and marks are not covered by that licence: see [TRADEMARKS.md](./TRADEMARKS.md).
 
 **Did you write all of this yourself?**  
-All seven skills are ALYA Labs' work. Where one builds on someone else's, it is credited in [NOTICE.md](./NOTICE.md) and inline. `idea-validation` adapts its pre-screen gate from Corey Haines' MIT-licensed makerskills.
+Substantially, yes, and where we did not, it is credited in [NOTICE.md](./NOTICE.md) and inline. Two skills build on MIT-licensed upstreams: `idea-validation` adapts its pre-screen gate from Corey Haines' makerskills, and `deepdive` adapts its REPL from brainqub3/RLM and its entropy profiling from avilum/minrlm. Everything else is ALYA Labs' own.
 
 **How is this different from other skill collections?**  
 These run in production at a real company every day, they are hardened against documented failure modes, and two of them (`autoskill`, `qa-sentinel`) improve the rest of your setup over time rather than sitting static.

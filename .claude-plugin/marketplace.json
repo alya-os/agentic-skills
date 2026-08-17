@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "qa-sentinel",
-      "description": "Goal-anchored adversarial verifier for any work an agent declares done. v1.0 redesign: reconstructs the actual acceptance criteria first, tries to FALSIFY the completion claim via independent channels, scales verification to change size, maintains a living qa-memory of human corrections (41-pattern failure catalog as seed corpus), renders calibrated verdicts with mandatory NOT-CHECKED disclosure, and runs sustained find-fix-verify iteration via /qa loop with fresh-context agents and a destructive-fix count-invariant gate.",
+      "description": "Goal-anchored adversarial verifier for any work an agent declares done. v1.0 redesign: reconstructs the actual acceptance criteria first, tries to FALSIFY the completion claim via independent channels, scales verification to change size, maintains a living qa-memory of human corrections (52-pattern failure catalog as seed corpus), renders calibrated verdicts with mandatory NOT-CHECKED disclosure, and runs sustained find-fix-verify iteration via /qa loop with fresh-context agents and a destructive-fix count-invariant gate.",
       "version": "1.3.0",
       "source": "./plugins/qa-sentinel",
       "category": "quality"
@@ -30,7 +30,7 @@
     },
     {
       "name": "autoskill",
-      "description": "Analyze coding sessions to detect corrections and preferences, then propose targeted skill improvements. Includes bidirectional push to sync edits back to your skills repo.",
+      "description": "Analyze coding sessions to detect corrections and preferences, then propose targeted improvements to the skills in your own workspace. Edits stay local: nothing is pushed to any upstream repo.",
       "version": "1.1.0",
       "source": "./plugins/autoskill",
       "category": "productivity"
