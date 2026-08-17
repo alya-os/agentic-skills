@@ -3,8 +3,9 @@
 
 Usage: python3 entropy_probe.py <source_file> [--sections 20] [--output json|text] [--save <path>]
 """
-# Entropy profiling adapted from avilum/minrlm (MIT License)
-# Source: https://github.com/avilum/minrlm
+# Entropy profiling adapted from avilum/minrlm, MIT License,
+# Copyright (c) 2026 Avi Lumelsky. Source: https://github.com/avilum/minrlm
+# Full licence text in NOTICE.md at the repository root.
 
 from __future__ import annotations
 import argparse, json, sys, zlib

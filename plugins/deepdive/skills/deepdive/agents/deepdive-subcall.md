@@ -104,4 +104,4 @@ Return ONLY valid JSON with this schema:
 
 ---
 
-_Sub-agent pattern adapted from brainqub3/claude_code_RLM (MIT License)_
+_Sub-agent pattern adapted from [brainqub3/RLM](https://github.com/brainqub3/RLM), MIT License, Copyright (c) 2026 john-adeojo. Full licence text in NOTICE.md at the repository root._

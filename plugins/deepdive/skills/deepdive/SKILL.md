@@ -11,8 +11,8 @@ description: |
   architecture. This is a practical approximation, not an implementation
   of the paper's Algorithm 1.
 
-  REPL integration adapted from claude_code_RLM (MIT license).
-  Entropy profiling adapted from minrlm (MIT license).
+  REPL integration adapted from brainqub3/RLM (MIT license).
+  Entropy profiling adapted from avilum/minrlm (MIT license).
 
   Use when: processing multiple source documents, writing long-form output
   from sources, doing deep research across many inputs, the AI "cuts corners"
@@ -356,7 +356,7 @@ uv run <skill_path>/scripts/concept_auditor.py \
 
 ## REPL Quick Reference
 
-Persistent Python REPL (`scripts/rlm_repl.py`, from claude_code_RLM, MIT).
+Persistent Python REPL (`scripts/rlm_repl.py`, from brainqub3/RLM, MIT).
 State persists in pickle files. Each source gets its own `--state` path.
 
 **Commands**: `init <path>` | `exec -c "code"` | `exec <<'PY'...PY` |
@@ -372,7 +372,7 @@ State persists in pickle files. Each source gets its own `--state` path.
 
 ## Entropy Quick Reference
 
-Compression-based density profiling (from minrlm, MIT). Splits text into
+Compression-based density profiling (from avilum/minrlm, MIT). Splits text into
 500-char micro-chunks, compresses each with zlib, reports ratio per section.
 
 | Ratio range | Meaning | Action |
@@ -495,12 +495,15 @@ If REPL or sub-agents fail: log failure, fall back to single-pass, append
 
 ## Attribution
 
-- **REPL**: Adapted from claude_code_RLM (MIT). Persistent pickle REPL and
+- **REPL**: Adapted from brainqub3/RLM (MIT, Copyright (c) 2026 john-adeojo),
+  published at the time as claude_code_RLM. Persistent pickle REPL and
   helpers (peek, grep, chunk_indices, write_chunks, add_buffer).
-- **Entropy**: Adapted from minrlm (MIT). zlib compression-ratio approach
-  from `compute_entropy_profile`.
+- **Entropy**: Adapted from avilum/minrlm (MIT, Copyright (c) 2026 Avi
+  Lumelsky). zlib compression-ratio approach from `compute_entropy_profile`.
 - **Recursive decomposition**: Inspired by Zhang, Kraska & Khattab,
   "Recursive Language Models" (arXiv:2512.24601v2, Jan 2026). Practical
   approximation, not an implementation of Algorithm 1.
 - **VERIFY/audit phases**: Original to DeepDive. Not present in
-  claude_code_RLM or minrlm.
+  brainqub3/RLM or avilum/minrlm.
+
+Full upstream licence texts are reproduced in NOTICE.md at the repository root.

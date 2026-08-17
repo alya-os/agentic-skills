@@ -31,8 +31,9 @@ Security note:
   This runs arbitrary Python via exec. Treat it like running code you wrote.
 """
 
-# Adapted from brainqub3/claude_code_RLM (MIT License)
-# Source: https://github.com/brainqub3/claude_code_RLM
+# Adapted from brainqub3/RLM (published as brainqub3/claude_code_RLM), MIT License,
+# Copyright (c) 2026 john-adeojo. Source: https://github.com/brainqub3/RLM
+# Full licence text in NOTICE.md at the repository root.
 
 from __future__ import annotations
 
