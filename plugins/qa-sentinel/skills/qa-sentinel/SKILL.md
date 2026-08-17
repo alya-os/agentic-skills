@@ -79,7 +79,7 @@ Rules: a criterion is PASS only with evidence at the stated denominator; anythin
 Human corrections are the most valuable input this skill receives. Protocol in `references/qa-memory.md`:
 - Any human override → structured QM entry in the project's `.claude/qa-memory.md` (root cause + the falsifiable check that would have caught it). Automatic; `/qa learn` also does it on demand.
 - Every run starts by reading that memory and citing the applicable lessons in the plan.
-- Lessons that generalize get promoted to `references/failure-catalog/` (41 patterns and growing — institutional memory, retrieved on demand, indexed in its README).
+- Lessons that generalize get promoted to `references/failure-catalog/` (52 patterns and growing — institutional memory, retrieved on demand, indexed in its README).
 - SKILL.md itself stays stable: learning accretes in memory and catalog, not in this file.
 
 ## Autonomy stance

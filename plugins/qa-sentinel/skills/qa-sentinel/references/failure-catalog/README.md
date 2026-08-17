@@ -1,6 +1,6 @@
 # Failure Catalog
 
-49 abstract patterns observed repeatedly across many projects. Each entry has a stable filename (used as `catalog_entry` in lens findings) so the aggregator and ledger can group across runs.
+52 abstract patterns observed repeatedly across many projects. Each entry has a stable filename (used as `catalog_entry` in lens findings) so the aggregator and ledger can group across runs.
 
 These are project-agnostic by design. No client names, no specific URLs, no specific bug instances.
 
@@ -13,7 +13,9 @@ These are project-agnostic by design. No client names, no specific URLs, no spec
 | [ai-slop-aesthetic](ai-slop-aesthetic.md) | designer, business-conversion |
 | [broken-alternate-link](broken-alternate-link.md) | seo, developer |
 | [cache-stale-verify](cache-stale-verify.md) | developer, seo |
+| [cross-domain-intent-cannibalization](cross-domain-intent-cannibalization.md) | seo, content-copy |
 | [cross-env-served-markup-drift](cross-env-served-markup-drift.md) | developer, seo, code-architect |
+| [css-override-fights-production-js-init](css-override-fights-production-js-init.md) | developer, designer, code-architect |
 | [fix-not-on-the-path](fix-not-on-the-path.md) | developer, code-architect |
 | [fixture-unlike-production](fixture-unlike-production.md) | developer, code-architect |
 | [ios-video-needs-playsinline](ios-video-needs-playsinline.md) | developer, designer, performance, accessibility |
@@ -57,6 +59,7 @@ These are project-agnostic by design. No client names, no specific URLs, no spec
 | [touch-target-undersized](touch-target-undersized.md) | accessibility, designer |
 | [translation-semantic-drift](translation-semantic-drift.md) | content-copy |
 | [ui-language-mismatch](ui-language-mismatch.md) | content-copy, designer |
+| [wp-wrapper-over-production-html](wp-wrapper-over-production-html.md) | developer, code-architect, designer |
 
 ## How to add a new pattern
 
