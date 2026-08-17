@@ -73,12 +73,15 @@ Create /tmp/prototype-{concept}_v{N}.html -- single self-contained HTML file.
 - All content as static HTML where possible, JS for interactions only
 ```
 
-### Step 3: Publish
+### Step 3: Share for review
 
-Use ftp-publisher skill to upload to review URL:
-```bash
-uv run .../upload.py -s snippets -l /tmp/file.html -r /internal/file.html
-```
+The variants are self-contained single-file HTML, so any of these works. Pick whichever
+matches how the project already ships previews, and ask the user if it is not obvious:
+
+- Open the local file directly, which is enough for a solo review.
+- Serve the folder: `python3 -m http.server 8000 --directory /tmp/variants`, useful when the
+  reviewer is on the same network or you need a real origin for the browser test below.
+- Upload to whatever host the project already uses for review URLs, if the reviewer is remote.
 
 ### Step 4: Browser Test
 

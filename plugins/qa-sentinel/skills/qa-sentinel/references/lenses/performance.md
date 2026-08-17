@@ -22,7 +22,7 @@ If `dev-front-system` is available, run `--perf` mode for deeper analysis.
 
 For Core Web Vitals: use `agent-browser` performance API or Lighthouse CLI if available.
 
-For bundle size: fetch deployed JS / CSS via `ftp-publisher` or curl and measure gzipped size locally.
+For bundle size: fetch the deployed JS / CSS with curl and measure gzipped size locally.
 
 For network waterfall: capture HAR-equivalent from `agent-browser`.
 
